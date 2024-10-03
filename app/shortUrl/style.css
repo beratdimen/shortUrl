@@ -1,0 +1,27 @@
+.form {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 24px;
+
+  input {
+    padding: 14px 532px 14px 32px;
+  }
+
+  button {
+    background-color: #2bd0d0;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 14px 40px;
+  }
+  button:hover {
+    background-color: #9ae3e3;
+  }
+}
+
+.shortUrl {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}

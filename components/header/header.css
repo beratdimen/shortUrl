@@ -1,0 +1,35 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 32px;
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22.5px;
+    text-align: left;
+    color: #9e9aa8;
+  }
+
+  .btnGroups {
+    button {
+      border: none;
+      background: transparent;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 22.5px;
+      text-align: left;
+      color: #9e9aa8;
+      padding: 9px 24px;
+    }
+
+    .sign {
+      background: #2bd0d0;
+      color: #ffffff;
+      border-radius: 32px;
+    }
+  }
+}

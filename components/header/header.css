@@ -3,6 +3,10 @@
   justify-content: space-between;
   align-items: center;
   padding-block: 32px;
+  max-width: 1110px;
+
+  margin: 0 auto;
+
   ul {
     list-style: none;
     display: flex;

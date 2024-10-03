@@ -1,0 +1,38 @@
+.footerContainer {
+  background-color: #232127;
+  display: flex;
+  padding-block: 70px;
+  color: white;
+  justify-content: space-between;
+  padding-inline: 165px;
+
+  .nav {
+    display: flex;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      color: #bfbfbf;
+      h6 {
+        margin-bottom: 12px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: -0.25px;
+        text-align: left;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .socilalIcon {
+    display: flex;
+    gap: 24px;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

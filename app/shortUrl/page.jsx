@@ -103,7 +103,7 @@ export default function ShortUrl() {
   };
 
   return (
-    <div className="container">
+    <div className="formContainer">
       <div className="form">
         <input
           type="text"

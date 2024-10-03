@@ -1,0 +1,39 @@
+.boostContainer {
+  margin-top: 32px;
+  background: linear-gradient(to bottom, #3a3054, #4b3f6b);
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 540px;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 32px;
+    padding-block: 54px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -1px;
+    color: #fff;
+  }
+
+  button {
+    border: none;
+    width: fit-content;
+    background-color: #2bd0d0;
+    color: #fff;
+    cursor: pointer;
+    padding: 14px 40px;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+  }
+
+  button:hover {
+    background-color: #9ae3e3;
+  }
+}

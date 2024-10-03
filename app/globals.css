@@ -44,3 +44,11 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+.container {
+  margin: 0 auto;
+  background-color: #eff1f7;
+  .body {
+    background-color: white;
+  }
+}

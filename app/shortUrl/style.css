@@ -1,6 +1,6 @@
 .formContainer {
   padding-inline: 165px;
-
+  margin-bottom: 64px;
   .form {
     display: flex;
     gap: 16px;
@@ -36,10 +36,22 @@
   }
 
   .shortUrl {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
+    background-color: white;
+    border-radius: 16px;
+
+    .shortUrlCard {
+      display: flex;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 32px;
+
+      .btnGroup {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+      }
+    }
 
     p {
       color: green;

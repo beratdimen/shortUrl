@@ -114,9 +114,16 @@ export default function ShortUrl() {
         <button onClick={() => findShortUrl()}>Shorten It!</button>
       </div>
       <div className="shortUrl">
-        <p>{data?.short_url}</p>
-        <button onClick={copyToClipboard}>Copied</button>
-        <button onClick={() => goToLink()}>Go To Url</button>
+        {data?.short_url && (
+          <div className="shortUrlCard">
+            <p>{data?.long_url}</p>
+            <div className="btnGroup">
+              <p>{data?.short_url}</p>
+              <button onClick={copyToClipboard}>Copied</button>
+              <button onClick={() => goToLink()}>Go To Url</button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

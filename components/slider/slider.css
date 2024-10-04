@@ -46,3 +46,14 @@
     }
   }
 }
+
+@media (width <= 426px) {
+  .sliderContainer {
+    flex-direction: column-reverse;
+
+    .content {
+      padding: 0;
+      padding-inline: 24px;
+    }
+  }
+}

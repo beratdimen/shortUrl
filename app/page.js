@@ -3,6 +3,7 @@ import ShortUrl from "./shortUrl/page";
 import Slider from "@/components/slider";
 import Footer from "@/components/footer";
 import Boost from "@/components/boost";
+import Advanced from "@/components/advanced";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Slider />
       </div>
       <ShortUrl />
+      <Advanced />
       <Boost />
       <Footer />
     </div>

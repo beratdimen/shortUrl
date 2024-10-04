@@ -37,3 +37,11 @@
     background-color: #9ae3e3;
   }
 }
+
+@media (width <= 426px) {
+  .boostContainer {
+    .content {
+      width: 343px;
+    }
+  }
+}

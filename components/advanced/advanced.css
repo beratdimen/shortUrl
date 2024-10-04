@@ -56,3 +56,12 @@
     }
   }
 }
+
+@media (width <= 426px) {
+  .advancedContainer {
+    .boxContainer {
+      flex-direction: column;
+      padding-inline: 24px;
+    }
+  }
+}

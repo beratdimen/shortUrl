@@ -36,3 +36,16 @@
     }
   }
 }
+
+@media (width <= 426px) {
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    .nav {
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
+  }
+}

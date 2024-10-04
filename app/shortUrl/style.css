@@ -79,3 +79,24 @@
     }
   }
 }
+
+@media (width<=426px) {
+  .formContainer {
+    padding-inline: 24px;
+    .form {
+      flex-direction: column;
+      padding: 24px;
+    }
+    .shortUrl {
+      .shortUrlCard {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btnGroup {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}

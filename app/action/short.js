@@ -3,25 +3,22 @@ import { z } from "zod";
 export async function KayitAction(values) {
   let errors = {};
 
-  // 1. Adım: Giriş doğrulama işlemleri
+  
   if (values.step === 1) {
     errors = {
-      longUrl: !values.longUrl ? "URL boş olamaz" : validateUrl(values.longUrl), // URL kontrolü
+      longUrl: !values.longUrl ? "URL boş olamaz" : validateUrl(values.longUrl), 
     };
   }
 
-  // Geçersiz bir değer olup olmadığını kontrol et
   const hasErrors = Object.values(errors).some((error) => error !== null);
   if (hasErrors) {
     return errors;
   }
 
-  // Eğer hatalar yoksa, kaydet
   await insertData(values.longUrl, makeid(7));
   return { success: true };
 }
 
-// URL doğrulama işlemi
 function validateUrl(url) {
   const urlControl = (url) => {
     if (!url.startsWith("http://") && !url.startsWith("https://")) {
@@ -30,12 +27,10 @@ function validateUrl(url) {
     return url;
   };
 
-  // zod ile URL doğrulama
   const validation = z.string().url().safeParse(urlControl(url));
   return validation.success ? null : "Geçersiz URL";
 }
 
-// Rastgele kısa URL oluşturucu
 function makeid(length) {
   let result = "";
   const characters =

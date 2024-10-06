@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import "./style.css";
 import { useRouter } from "next/navigation";
+import { z } from "zod";
 
 export default function ShortUrl() {
   const [data, setData] = useState(null);
@@ -10,8 +11,24 @@ export default function ShortUrl() {
   const [longUrl, setLongUrl] = useState(null);
   const router = useRouter();
 
+  const urlControl = (url) => {
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+      url = `https://${url}`;
+    }
+
+    if (!url.endsWith(".com") && !url.endsWith(".com.tr")) {
+      return null;
+    }
+    return url;
+  };
+
   const findShortUrl = () => {
-    insertData(longUrl, makeid(7));
+    const validation = z.string().url().safeParse(urlControl(longUrl));
+    if (validation.success) {
+      insertData(longUrl, makeid(7));
+    } else {
+      alert("Lütfen geçerli bir URL girin.");
+    }
   };
 
   const copyToClipboard = () => {

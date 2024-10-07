@@ -4,12 +4,33 @@ import { useEffect, useState } from "react";
 import "./style.css";
 import { useRouter } from "next/navigation";
 import { z } from "zod";
+import { createClient } from "@/utils/supabase/client";
+import Cookies from "js-cookie";
 
 export default function ShortUrl() {
   const [data, setData] = useState(null);
   const [products, setProducts] = useState([]);
   const [longUrl, setLongUrl] = useState(null);
   const router = useRouter();
+
+  const [user, setUser] = useState({});
+  const supabase = createClient();
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const {
+        data: { user },
+        error,
+      } = await supabase.auth.getUser();
+      setUser(user);
+      console.log(user);
+    };
+    fetchUser();
+  }, []);
+
+  useEffect(() => {
+    Cookies.set("user", JSON.stringify(user));
+  }, [user]);
 
   const urlControl = (url) => {
     if (!url.startsWith("http://") && !url.startsWith("https://")) {

@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <div className="container">
       <div className="body">
-        <Header />
         <Slider />
       </div>
       <ShortUrl />

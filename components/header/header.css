@@ -19,7 +19,7 @@
   }
 
   .btnGroups {
-    button {
+    a {
       border: none;
       background: transparent;
       font-size: 15px;
@@ -28,6 +28,7 @@
       text-align: left;
       color: #9e9aa8;
       padding: 9px 24px;
+      text-decoration: none;
     }
 
     .sign {

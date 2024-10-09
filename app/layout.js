@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import "./globals.css";
 
 import { Poppins } from "next/font/google";
+import { Toaster } from "sonner";
 
 const poppins = Poppins({
   weight: ["400"],
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${poppins.variable}`}>
         <Header />
+        <Toaster position="top-right" richColors />
 
         {children}
       </body>

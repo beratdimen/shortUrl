@@ -4,8 +4,27 @@
   align-items: center;
   padding-block: 32px;
   max-width: 1110px;
-
   margin: 0 auto;
+
+  .loginPage {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    button {
+      border: none;
+      background: transparent;
+      padding: 4px 8px;
+      cursor: pointer;
+    }
+  }
+
+  h1 {
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
 
   ul {
     list-style: none;

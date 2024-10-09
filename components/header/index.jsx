@@ -1,23 +1,35 @@
-"use client";
-
 import Link from "next/link";
 import "./header.css";
-import Cookies from "js-cookie";
+import { LogOutIcon } from "@/helpers/icons";
+import { createClient } from "@/utils/supabase/server";
+import { signOut } from "@/action/auth";
+import LogoutButton from "../logout-button";
 
-export default function Header() {
-  const userCookie = Cookies.get("user");
-  const user = userCookie ? JSON.parse(userCookie) : null;
+export default async function Header() {
+  const supabase = createClient();
+  const {
+    data: { user },
+    error,
+  } = await supabase.auth.getUser();
+  console.log(user);
 
   return (
     <div className="headerContainer">
-      <h1>LOGO</h1>
+      <h1>
+        <Link href="/">LOGO</Link>
+      </h1>
       <ul>
         <li>Features</li>
         <li>Pricing</li>
         <li>Resources</li>
       </ul>
       {user ? (
-        user?.email
+        <>
+          <div className="loginPage">
+            <p>{user?.email}</p>
+            <LogoutButton />
+          </div>
+        </>
       ) : (
         <div className="btnGroups">
           <Link href={"/login"}>Login</Link>

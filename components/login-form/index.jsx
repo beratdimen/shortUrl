@@ -1,5 +1,6 @@
 import { login, signup } from "@/app/login/action";
 import "./loginSignUp.css";
+import Link from "next/link";
 
 export default function LoginSignUpForm({ page }) {
   return (
@@ -26,6 +27,16 @@ export default function LoginSignUpForm({ page }) {
           <button formAction={signup}>Sign up</button>
         )}
       </form>
+      {page == "login" ? (
+        <div className="signupbtnContainer">
+          <p>Not a member?</p>
+          <Link href="/sign-up" className="signupbtn">
+            Signup Now
+          </Link>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

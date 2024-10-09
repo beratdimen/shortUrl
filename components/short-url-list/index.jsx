@@ -53,6 +53,7 @@ export default function ListShorUrl() {
 
   return (
     <div className="tableContainer">
+      <h1>Previous URL</h1>
       <table className="urlTable">
         <thead>
           <tr>

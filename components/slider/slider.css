@@ -47,7 +47,7 @@
   }
 }
 
-@media (width <= 426px) {
+@media (max-width: 768px) {
   .sliderContainer {
     flex-direction: column-reverse;
 

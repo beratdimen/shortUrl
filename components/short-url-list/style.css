@@ -1,6 +1,8 @@
 .tableContainer {
   padding: 20px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
@@ -47,7 +49,6 @@
   background-color: #fff;
 }
 
-/* Button Styling */
 .urlTable button {
   padding: 8px 16px;
   background-color: #3a3054;
@@ -78,24 +79,29 @@
   }
 }
 
-@media (width<= 426px) {
+@media (max-width: 768px) {
+  .tableContainer {
+    width: auto;
+    padding-inline: 24px;
+  }
   .urlTable th,
   .urlTable td {
-    padding: 10px; 
-    font-size: 14px; 
+    padding: 10px;
+    font-size: 14px;
   }
 
   .urlTable {
-    font-size: 14px; 
-    width: 400px;
+    font-size: 14px;
+    max-width: 400px;
+    margin-inline: 24px;
   }
 
   .actionButtons {
-    flex-direction: row; 
-    gap: 8px; 
+    flex-direction: row;
+    gap: 8px;
   }
 
   .urlTable button {
-    width: auto; 
+    width: auto;
   }
 }

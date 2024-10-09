@@ -48,10 +48,11 @@ export default function ShortUrlForm() {
         />
         <button>Linki Kısalt</button>
       </form>
+      {state?.short_url && <h1>New URL</h1>}
       <div className="shortUrl">
         {state?.short_url && (
           <div className="shortUrlCard">
-            <p>{state?.longUrl}</p>
+            <p>{state?.long_url}</p>
             <div className="btnGroup">
               <p>{state?.short_url}</p>
               <button onClick={copyToClipboard}>Copied</button>

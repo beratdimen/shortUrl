@@ -57,7 +57,7 @@
   }
 }
 
-@media (width <= 426px) {
+@media (max-width: 768px) {
   .advancedContainer {
     .boxContainer {
       flex-direction: column;

@@ -38,7 +38,7 @@
   }
 }
 
-@media (width <= 426px) {
+@media (max-width: 768px) {
   .boostContainer {
     .content {
       width: 343px;

@@ -37,7 +37,7 @@
   }
 }
 
-@media (width <= 426px) {
+@media (max-width: 768px) {
   .footerContainer {
     flex-direction: column;
     align-items: center;
@@ -45,7 +45,7 @@
     .nav {
       flex-direction: column;
       gap: 16px;
-      align-items: center;
+      align-items: start;
     }
   }
 }

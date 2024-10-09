@@ -80,7 +80,7 @@
   }
 }
 
-@media (width<=426px) {
+@media (max-width: 768px) {
   .formContainer {
     padding-inline: 24px;
     .form {

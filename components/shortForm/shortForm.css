@@ -1,6 +1,9 @@
 .formContainer {
   padding-inline: 165px;
   margin-bottom: 64px;
+  h1 {
+    text-align: center;
+  }
   form {
     display: flex;
     gap: 16px;
@@ -80,10 +83,10 @@
   }
 }
 
-@media (width<=426px) {
+@media (max-width: 768px) {
   .formContainer {
     padding-inline: 24px;
-    .form {
+    form {
       flex-direction: column;
       padding: 24px;
     }
